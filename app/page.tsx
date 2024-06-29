@@ -14,13 +14,11 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import Tiptap from '@/components/Tiptap'
 import * as z from "zod";
 
-
-
 export default function Home() {
   const formSchema = z.object({
     title: z
       .string()
-      .min(5, { message: "Not long enough"})
+      .min(1, { message: "Not long enough"})
       .max(100, { message: "Too long"}),
     description: z
       .string()
